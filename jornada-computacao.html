@@ -1,44 +1,199 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
     <head>
-        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Jornada da Computação - IFSULDEMINAS</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
     </head>
-
     <body>
-        
-        <div class="estilo">
-            
-            <h2>A Jornada da Computação no IFSULDEMINAS - Campus Machado: Formando o Futuro da Tecnologia</h2><hr><br>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container">
+                <a class="navbar-brand fw-semibold" href="index.html">IFSULDEMINAS - Campus Machado</a>
+            </div>
+        </nav>
 
-            <p>A <strong>jornada da computação no Instituto Federal do Sul de Minas Gerais (IFSULDEMINAS) - Campus Machado</strong> é marcada por um compromisso inabalável com a excelência na formação de profissionais capacitados para o dinâmico e crescente mercado de tecnologia. Localizado em uma região de grande importância para o agronegócio e com crescente demanda por inovação tecnológica, o campus Machado desempenha um papel crucial na disseminação do conhecimento e no desenvolvimento de talentos na área da computação.</p>
-        
-            <p>Desde seus primeiros passos, os cursos de computação do IFSULDEMINAS - Campus Machado têm se dedicado a oferecer uma formação abrangente, que equilibra os fundamentos teóricos da ciência da computação com as habilidades práticas essenciais para o sucesso profissional. A instituição compreende que a jornada da computação é tanto uma exploração dos conceitos abstratos que sustentam a tecnologia quanto o domínio das ferramentas e técnicas que a tornam aplicável.</p>
-        
-            <p>Ao longo de sua história, o campus Machado tem acompanhado a evolução da computação, adaptando seus currículos e metodologias de ensino para incorporar as mais recentes tendências e tecnologias. A instituição investe em <strong>laboratórios modernos e bem equipados</strong>, proporcionando aos alunos um ambiente propício para a experimentação e o desenvolvimento de projetos práticos. Essa abordagem "mão na massa" é fundamental para consolidar o aprendizado teórico e preparar os futuros profissionais para os desafios do mundo real.</p>
-        
-            <p>A jornada acadêmica no IFSULDEMINAS - Campus Machado não se limita à sala de aula e aos laboratórios. A instituição incentiva a participação dos alunos em <strong>projetos de pesquisa e extensão</strong>, proporcionando oportunidades para que eles apliquem seus conhecimentos em contextos reais, muitas vezes em parceria com empresas e a comunidade local. Essa interação com o mundo exterior enriquece a formação dos alunos, desenvolvendo habilidades de trabalho em equipe, resolução de problemas e inovação.</p>
-        
-            <p>O corpo docente dos cursos de computação do campus Machado é composto por <strong>professores qualificados e experientes</strong>, muitos dos quais com atuação no mercado de tecnologia e com produção científica relevante. Essa proximidade com a prática profissional e a pesquisa garante que os alunos recebam uma formação atualizada e relevante para as demandas do setor.</p>
-        
-            <p>A jornada da computação no IFSULDEMINAS - Campus Machado também se reflete no <strong>engajamento com a comunidade</strong>. A instituição frequentemente promove eventos, workshops e palestras sobre temas relacionados à tecnologia, contribuindo para a disseminação do conhecimento e o estímulo ao interesse pela área na região. Além disso, projetos de extensão muitas vezes visam atender às necessidades tecnológicas de pequenas empresas e organizações locais.</p>
-        
-            <p>Os egressos dos cursos de computação do IFSULDEMINAS - Campus Machado têm se destacado em diversas áreas, desde o desenvolvimento de software e aplicativos web e mobile até a análise de dados, a segurança da informação e a gestão de infraestrutura de TI. Sua formação sólida e a experiência prática adquirida durante a jornada acadêmica os tornam profissionais altamente valorizados pelo mercado de trabalho.</p>
-        
-            <p>Em suma, a jornada da computação no IFSULDEMINAS - Campus Machado é uma história de dedicação à formação de profissionais competentes, de acompanhamento da evolução tecnológica e de compromisso com o desenvolvimento regional. Ao proporcionar uma educação de qualidade, que alia teoria e prática, a instituição continua a desempenhar um papel fundamental na construção do futuro da tecnologia no Sul de Minas Gerais e no Brasil.</p>
-        
-            <br>
-            <h3>Pilares da Jornada da Computação no IFSULDEMINAS - Campus Machado:</h3>
-            <ul>
-              <li><strong>Formação Abrangente:</strong> Equilíbrio entre teoria e prática.</li>
-              <li><strong>Infraestrutura Moderna:</strong> Laboratórios bem equipados para aprendizado prático.</li>
-              <li><strong>Projetos de Pesquisa e Extensão:</strong> Aplicação do conhecimento em contextos reais.</li>
-              <li><strong>Corpo Docente Qualificado:</strong> Professores com experiência acadêmica e profissional.</li>
-              <li><strong>Engajamento com a Comunidade:</strong> Disseminação do conhecimento e atendimento às demandas locais.</li>
-              <li><strong>Ênfase na Inovação:</strong> Estímulo ao desenvolvimento de soluções criativas.</li><br><br>
-              <img class="estiloimg" src="1.png" alt="foto1"><br><br>
-              <img class="estiloimg" src="2.png" alt="foto2"><br><br>
-              <img class="estiloimg" src="3.png" alt="foto3">
+        <div class="container-fluid py-4 jornada-layout">
+            <div class="row g-4">
+                <aside class="col-lg-3">
+                    <div class="list-group shadow-sm mb-4">
+                        <div class="list-group-item bg-light fw-bold text-uppercase small">Destaques do curso</div>
+                        <a href="jornada-computacao.html" class="list-group-item list-group-item-action active bg-success border-success">
+                            <i class="bi bi-mortarboard-fill me-2"></i>Jornada da Computação
+                        </a>
+                        <a href="computerday.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-calendar-event me-2"></i>Computer Day
+                        </a>
+                        <a href="pagina_bolsas.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-cash-coin me-2"></i>Bolsas e Auxílios
+                        </a>
+                        <a href="projetos.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-kanban me-2"></i>Projetos
+                        </a>
+                        <a href="laboratory.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-cpu me-2"></i>Laboratórios
+                        </a>
+                        <a href="grupos-de-estudo.html" class="list-group-item list-group-item-action">
+                            <i class="bi bi-people-fill me-2"></i>Grupos de Estudo e Pesquisa
+                        </a>
+                    </div>
 
+                    <div class="card shadow-sm border-0 jornada-sidebar-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-success fw-bold">Em foco</h5>
+                            <p class="card-text mb-3">Formação, inovação e prática em uma trajetória conectada ao mercado e à comunidade.</p>
+                            <div class="d-flex align-items-center gap-3 flex-wrap">
+                                <div class="badge rounded-pill text-bg-success px-3 py-2">Pesquisa</div>
+                                <div class="badge rounded-pill text-bg-success px-3 py-2">Extensão</div>
+                                <div class="badge rounded-pill text-bg-success px-3 py-2">Tecnologia</div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
 
+                <main class="col-lg-9">
+                    <section class="card border-0 shadow-sm jornada-hero mb-4">
+                        <div class="card-body p-4 p-md-5 text-white">
+                            <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+                                <span class="badge rounded-pill bg-light text-success fw-semibold">Curso de Computação</span>
+                                <span class="badge rounded-pill bg-light text-success fw-semibold">IFSULDEMINAS - Campus Machado</span>
+                            </div>
+                            <h1 class="display-6 fw-bold mb-3">A Jornada da Computação no IFSULDEMINAS - Campus Machado</h1>
+                            <p class="lead mb-0 jornada-lead">Uma formação que combina teoria, prática e conexão com a comunidade para preparar profissionais capazes de transformar tecnologia em soluções reais.</p>
+                        </div>
+                    </section>
+
+                    <section class="row g-4 mb-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm jornada-card">
+                                <div class="card-body">
+                                    <div class="jornada-icon mb-3"><i class="bi bi-book-half"></i></div>
+                                    <h5 class="card-title fw-bold">Formação abrangente</h5>
+                                    <p class="card-text mb-0">Base teórica sólida com foco em raciocínio computacional, métodos e resolução de problemas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm jornada-card">
+                                <div class="card-body">
+                                    <div class="jornada-icon mb-3"><i class="bi bi-laptop"></i></div>
+                                    <h5 class="card-title fw-bold">Infraestrutura moderna</h5>
+                                    <p class="card-text mb-0">Laboratórios equipados para apoiar atividades práticas, experimentação e desenvolvimento de projetos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm jornada-card">
+                                <div class="card-body">
+                                    <div class="jornada-icon mb-3"><i class="bi bi-people-fill"></i></div>
+                                    <h5 class="card-title fw-bold">Comunidade e impacto</h5>
+                                    <p class="card-text mb-0">Projetos de pesquisa, extensão e eventos que conectam estudantes, campus e região.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="jornada-icon jornada-icon-sm"><i class="bi bi-stars"></i></div>
+                                <h2 class="h3 mb-0 fw-bold">Por que essa jornada se destaca</h2>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <p>A <strong>jornada da computação no Instituto Federal do Sul de Minas Gerais (IFSULDEMINAS) - Campus Machado</strong> é marcada por um compromisso com a excelência na formação de profissionais capacitados para o dinâmico mercado de tecnologia.</p>
+                                    <p>Desde seus primeiros passos, os cursos de computação têm se dedicado a oferecer uma formação equilibrada, unindo fundamentos teóricos da ciência da computação com habilidades práticas essenciais para o sucesso profissional.</p>
+                                    <p>Ao longo de sua história, o campus Machado tem acompanhado a evolução da computação, adaptando currículos e metodologias para incorporar novas tendências e tecnologias.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>A instituição investe em <strong>laboratórios modernos e bem equipados</strong>, proporcionando um ambiente favorável à experimentação e ao desenvolvimento de projetos práticos.</p>
+                                    <p>A jornada acadêmica também incentiva a participação em <strong>pesquisa e extensão</strong>, ampliando a experiência dos estudantes em contextos reais e colaborativos.</p>
+                                    <p>Esse conjunto fortalece a formação e amplia a empregabilidade dos egressos, que seguem para áreas como desenvolvimento de software, análise de dados e infraestrutura de TI.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="h3 fw-bold mb-4">Pilares da jornada</h2>
+                            <div class="row g-4">
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="border rounded-4 p-4 h-100 jornada-pillar">
+                                        <h5 class="fw-bold text-success"><i class="bi bi-check2-circle me-2"></i>Formação abrangente</h5>
+                                        <p class="mb-0">Equilíbrio entre teoria e prática para construir base técnica consistente.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="border rounded-4 p-4 h-100 jornada-pillar">
+                                        <h5 class="fw-bold text-success"><i class="bi bi-gear-wide-connected me-2"></i>Infraestrutura moderna</h5>
+                                        <p class="mb-0">Laboratórios bem equipados para aprendizado prático e experimentação.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="border rounded-4 p-4 h-100 jornada-pillar">
+                                        <h5 class="fw-bold text-success"><i class="bi bi-search me-2"></i>Pesquisa e extensão</h5>
+                                        <p class="mb-0">Aplicação do conhecimento em contextos reais e parcerias com a comunidade.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="border rounded-4 p-4 h-100 jornada-pillar">
+                                        <h5 class="fw-bold text-success"><i class="bi bi-person-workspace me-2"></i>Corpo docente qualificado</h5>
+                                        <p class="mb-0">Professores com experiência acadêmica e atuação profissional relevante.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="border rounded-4 p-4 h-100 jornada-pillar">
+                                        <h5 class="fw-bold text-success"><i class="bi bi-people me-2"></i>Engajamento com a comunidade</h5>
+                                        <p class="mb-0">Eventos, workshops e ações que ampliam o impacto social do campus.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-4">
+                                    <div class="border rounded-4 p-4 h-100 jornada-pillar">
+                                        <h5 class="fw-bold text-success"><i class="bi bi-lightning-charge me-2"></i>Ênfase na inovação</h5>
+                                        <p class="mb-0">Estímulo ao desenvolvimento de soluções criativas para problemas reais.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card border-0 shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <div class="jornada-icon jornada-icon-sm"><i class="bi bi-images"></i></div>
+                                <h2 class="h3 mb-0 fw-bold">Galeria da jornada</h2>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <figure class="jornada-figure h-100">
+                                        <img class="img-fluid rounded-4 shadow-sm jornada-gallery-img" src="1.png" alt="Imagem da jornada da computação 1" />
+                                        <figcaption class="mt-2 text-muted small">Ambientes de formação e prática.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure class="jornada-figure h-100">
+                                        <img class="img-fluid rounded-4 shadow-sm jornada-gallery-img" src="2.png" alt="Imagem da jornada da computação 2" />
+                                        <figcaption class="mt-2 text-muted small">Tecnologia aplicada ao aprendizado.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure class="jornada-figure h-100">
+                                        <img class="img-fluid rounded-4 shadow-sm jornada-gallery-img" src="3.png" alt="Imagem da jornada da computação 3" />
+                                        <figcaption class="mt-2 text-muted small">Integração entre estudantes e conhecimento.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
         </div>
+
+        <footer class="bg-dark text-white text-center py-3 mt-4">
+            <p class="mb-0">&copy; 2026 IFSULDEMINAS - Campus Machado | Jornada da Computação</p>
+        </footer>
     </body>
 </html>
