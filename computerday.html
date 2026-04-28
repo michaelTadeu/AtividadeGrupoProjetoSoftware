@@ -3,83 +3,191 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sistemas de Informação - IFSULDEMINAS</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Computer Day - Sistemas de Informação</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#16a34a', /* green-600 */
+            secondary: '#14532d', /* green-900 */
+            accent: '#22c55e', /* green-500 */
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-primary selection:text-white">
 
   <!-- Navbar principal -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">IFSULDEMINAS - Campus Machado</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <nav class="bg-primary text-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <a class="text-xl font-bold tracking-tight hover:text-green-100 transition-colors" href="index.html">
+          <i class="fa-solid fa-graduation-cap mr-2"></i> IFSULDEMINAS <span class="font-normal text-green-100 hidden sm:inline">- Campus Machado</span>
+        </a>
+      </div>
     </div>
   </nav>
 
   <!-- Layout principal -->
-  <div class="container-fluid mt-4">
-    <div class="row">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 mb-12">
+    <div class="flex flex-col md:flex-row gap-8">
       
       <!-- Menu lateral -->
-      <aside class="col-md-3">
-        <div class="list-group mb-4">
-          <h5 class="mb-3">DESTAQUES DO CURSO</h5>
-          <a href="jornada-computacao.html" class="list-group-item list-group-item-action">Jornada da Computação</a>
-          <a href="computerday.html" class="list-group-item list-group-item-action">Computer Day</a>
-          <a href="pagina_bolsas.html" class="list-group-item list-group-item-action">Bolsas e Auxílios</a>
-          <a href="projetos.html" class="list-group-item list-group-item-action">Projetos</a>
-          <a href="laboratory.html" class="list-group-item list-group-item-action">Laboratórios</a>
-          <a href="grupos-de-estudo.html" class="list-group-item list-group-item-action">Grupos de Estudo e Pesquisa</a>
+      <aside class="w-full md:w-1/4 flex-shrink-0">
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden mb-8">
+          <div class="bg-slate-50 px-5 py-4 border-b border-slate-100">
+            <h5 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Destaques do Curso</h5>
+          </div>
+          <div class="flex flex-col divide-y divide-slate-50">
+            <a href="jornada-computacao.html" class="px-5 py-3 text-slate-600 hover:bg-green-50 hover:text-primary transition-colors flex items-center gap-3">
+              <i class="fa-solid fa-laptop-code w-5 text-center text-slate-400"></i> Jornada SI
+            </a>
+            <a href="computerday.html" class="px-5 py-3 text-primary bg-green-50 font-medium flex items-center gap-3 border-l-4 border-primary">
+              <i class="fa-regular fa-calendar-check w-5 text-center"></i> Eventos
+            </a>
+            <a href="pagina_bolsas.html" class="px-5 py-3 text-slate-600 hover:bg-green-50 hover:text-primary transition-colors flex items-center gap-3">
+              <i class="fa-solid fa-hand-holding-dollar w-5 text-center text-slate-400"></i> Bolsas
+            </a>
+            <a href="projetos.html" class="px-5 py-3 text-slate-600 hover:bg-green-50 hover:text-primary transition-colors flex items-center gap-3">
+              <i class="fa-solid fa-lightbulb w-5 text-center text-slate-400"></i> Nossos Projetos
+            </a>
+          </div>
         </div>
 
-        <div class="list-group">
-          <h5 class="mb-3">CURSOS DA ÁREA</h5>
-          <a href="#" class="list-group-item list-group-item-action active bg-success border-success">Sistemas de Informação</a>
-          <a href="#" class="list-group-item list-group-item-action">Técnico em Informática Integrado</a>
-          <a href="#" class="list-group-item list-group-item-action">Técnico EaD</a>
-          <a href="#" class="list-group-item list-group-item-action">Pós-graduação</a>
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+          <div class="bg-slate-50 px-5 py-4 border-b border-slate-100">
+            <h5 class="text-sm font-bold text-slate-500 uppercase tracking-wider">Cursos da Área</h5>
+          </div>
+          <div class="flex flex-col divide-y divide-slate-50">
+            <a href="#" class="px-5 py-3 text-primary bg-green-50 font-medium border-l-4 border-primary">Sistemas de Informação</a>
+            <a href="#" class="px-5 py-3 text-slate-600 hover:bg-slate-50 transition-colors">Técnico em Informática Integrado</a>
+            <a href="#" class="px-5 py-3 text-slate-600 hover:bg-slate-50 transition-colors">Técnico EaD</a>
+            <a href="#" class="px-5 py-3 text-slate-600 hover:bg-slate-50 transition-colors">Pós-graduação</a>
+          </div>
         </div>
       </aside>
 
-      <main class="col-md-8" style="align-items: center; border: 2px solid #ccc;">
-        <h1 class="text-center my-4">Computer Day</h1>
-      
-        <p>
-          O <strong>Computer Day</strong> do <strong>IFSULDEMINAS - Campus Machado</strong> é um evento anual de um dia que promove a integração entre os estudantes do curso de <strong>Sistemas de Informação</strong> e do <strong>Curso Técnico em Informática Integrado</strong>. Durante o evento, os participantes têm a oportunidade de:
-        </p>
-        <ul>
-          <li>Assistir a palestras sobre temas atuais da área de tecnologia;</li>
-          <li>Participar de minicursos práticos e enriquecedores;</li>
-          <li>Interagir em momentos de integração com sorteios de brindes;</li>
-          <li>Conhecer projetos desenvolvidos pelos próprios alunos, como: <strong>Autobots</strong>, <strong>Pixels</strong> e <strong>Meninas Digitais</strong>.</li>
-        </ul>
-      
-        <div class="d-flex justify-content-between flex-wrap mt-4 text-center">
-          <div class="me-2 mb-2">
-            <img src="img/IMG_0001.JPG" class="img-thumbnail" style="width: 400px;" alt="Imagem de curso de manutenção de computadores">
-            <p style="font-size: 0.8rem;">Curso de Arduino</p>
+      <!-- Conteúdo principal -->
+      <main class="w-full md:w-3/4">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+          
+          <!-- Banner Hero -->
+          <div class="bg-gradient-to-r from-secondary to-primary px-8 py-12 text-white relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 opacity-10">
+              <i class="fa-solid fa-microchip text-9xl"></i>
+            </div>
+            <div class="relative z-10">
+              <span class="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium mb-4 backdrop-blur-sm">Evento Anual</span>
+              <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Computer Day</h1>
+              <p class="text-green-50 text-lg max-w-2xl leading-relaxed">
+                Integração, tecnologia e inovação reunidos em um único dia. Promovendo o conhecimento para a comunidade acadêmica.
+              </p>
+            </div>
           </div>
-          <div class="me-2 mb-2">
-            <img src="img/IMG_0002.JPG" class="img-thumbnail" style="width: 400px;" alt="Imagem de curso de manutenção de computadores">
-            <p style="font-size: 0.8rem;">Palestra sobre Mercado de Trabalho</p>
-          </div>
-          <div class="me-2 mb-2">
-            <img src="img/IMG_0003.JPG" class="img-thumbnail" style="width: 400px;" alt="Imagem de curso de manutenção de computadores">
-            <p style="font-size: 0.8rem;">Alunos do curso de Sistemas de Informação de manutenção</p>
+
+          <div class="p-8">
+            <div class="prose max-w-none text-slate-600 mb-10 leading-relaxed">
+              <p class="text-lg">
+                O <strong class="text-slate-800">Computer Day</strong> do <strong class="text-slate-800">IFSULDEMINAS - Campus Machado</strong> é um evento anual que promove a integração entre os estudantes do curso de <strong class="text-slate-800">Sistemas de Informação</strong> e do <strong class="text-slate-800">Curso Técnico em Informática Integrado</strong>.
+              </p>
+              
+              <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-bullseye text-primary"></i> Durante o evento você poderá:
+              </h3>
+              
+              <div class="grid sm:grid-cols-2 gap-4 mt-6">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex gap-4">
+                  <div class="bg-white p-3 rounded-lg shadow-sm h-fit text-primary">
+                    <i class="fa-solid fa-chalkboard-user text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 mb-1">Palestras</h4>
+                    <p class="text-sm text-slate-500">Acompanhe temas atuais e tendências da área de tecnologia.</p>
+                  </div>
+                </div>
+                
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex gap-4">
+                  <div class="bg-white p-3 rounded-lg shadow-sm h-fit text-primary">
+                    <i class="fa-solid fa-laptop-code text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 mb-1">Minicursos</h4>
+                    <p class="text-sm text-slate-500">Aulas práticas e enriquecedoras para alavancar suas skills.</p>
+                  </div>
+                </div>
+                
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex gap-4">
+                  <div class="bg-white p-3 rounded-lg shadow-sm h-fit text-primary">
+                    <i class="fa-solid fa-gift text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 mb-1">Integração</h4>
+                    <p class="text-sm text-slate-500">Momentos de networking, troca de ideias e sorteios de brindes.</p>
+                  </div>
+                </div>
+                
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 flex gap-4">
+                  <div class="bg-white p-3 rounded-lg shadow-sm h-fit text-primary">
+                    <i class="fa-solid fa-lightbulb text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 mb-1">Projetos</h4>
+                    <p class="text-sm text-slate-500">Conheça projetos como Autobots, Pixels e Meninas Digitais.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+              <i class="fa-solid fa-images text-primary"></i> Galeria de Edições Anteriores
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="group relative rounded-xl overflow-hidden shadow-sm border border-slate-100 bg-white">
+                <div class="aspect-video w-full bg-slate-200 overflow-hidden">
+                  <img src="img/IMG_0001.JPG" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Curso de Arduino">
+                </div>
+                <div class="p-4">
+                  <p class="font-medium text-slate-800 text-sm">Curso de Arduino</p>
+                </div>
+              </div>
+              
+              <div class="group relative rounded-xl overflow-hidden shadow-sm border border-slate-100 bg-white">
+                <div class="aspect-video w-full bg-slate-200 overflow-hidden">
+                  <img src="img/IMG_0002.JPG" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Palestra sobre Mercado de Trabalho">
+                </div>
+                <div class="p-4">
+                  <p class="font-medium text-slate-800 text-sm">Palestra: Mercado de Trabalho</p>
+                </div>
+              </div>
+              
+              <div class="group relative rounded-xl overflow-hidden shadow-sm border border-slate-100 bg-white">
+                <div class="aspect-video w-full bg-slate-200 overflow-hidden">
+                  <img src="img/IMG_0003.JPG" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="Alunos do curso de Sistemas de Informação">
+                </div>
+                <div class="p-4">
+                  <p class="font-medium text-slate-800 text-sm">Atividades Práticas de Manutenção</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        
       </main>
-      
       
     </div>
   </div>
 
-      <!-- Rodapé -->
-  <footer class="bg-dark text-white text-center py-3 mt-4">
-    <p>&copy; 2025 IFSULDEMINAS - Campus Machado | Curso de Sistemas de Informação</p>
+  <!-- Rodapé -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="mb-2">&copy; 2025 IFSULDEMINAS - Campus Machado</p>
+      <p class="text-sm">Desenvolvido pelo Curso de Sistemas de Informação</p>
+    </div>
   </footer>
     
 </body>
