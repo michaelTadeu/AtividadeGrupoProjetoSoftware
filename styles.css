@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.estilo{
+
+  text-align: justify; /* Justifica o texto */
+  line-height: 1.6; /* Espaçamento entre linhas (ajuste conforme necessário) */
+  word-spacing: 0.1em; /* Espaçamento entre palavras (ajuste conforme necessário) */
+  letter-spacing: 0.02em; /* Espaçamento entre letras (ajuste conforme necessário) */
+  padding: 15px; /* Adiciona um preenchimento interno para melhor visualização (ajuste conforme necessário) */
+  border: 1px solid #ccc; /* Adiciona uma borda sutil (opcional) */
+  border-radius: 5px; /* Arredonda as bordas (opcional) */
+  margin-bottom: 20px; /* Adiciona margem inferior para separar de outros elementos (ajuste conforme necessário) */
+  font-family: 'Arial', sans-serif; /* Escolha uma fonte adequada (ajuste conforme necessário) */
+  font-size: 16px; /* Define o tamanho da fonte (ajuste conforme necessário) */
+  color: #333; /* Define a cor do texto (ajuste conforme necessário) */
+
+  text-indent: 1em; /* Adiciona uma indentação na primeira linha de cada parágrafo (opcional) */
+  margin-bottom: 1em;
+  padding: 50px;
+
+}
+
+.estiloimg{
+
+    width: 300px;
+    height: 200px;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h4 {
+  color: #007bff;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: red;
+}
