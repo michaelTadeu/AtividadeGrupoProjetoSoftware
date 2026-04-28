@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sistemas de Informação - IFSULDEMINAS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-        <style>
+    <style>
         html, body {
             height: 100%;
             margin: 0;
+            background-color: #f8f9fa; /* Fundo levemente cinza para destacar os cards */
         }
 
         body {
@@ -21,70 +23,160 @@
         .content-wrapper {
             flex: 1;
         }
+
+        .sidebar-link {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .sidebar-link:hover:not(.active) {
+            background-color: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .group-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .group-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar principal -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html">IFSULDEMINAS - Campus Machado</a>
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-mortarboard-fill me-2"></i>IFSULDEMINAS - Campus Machado
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
     </nav>
+
     <div class="content-wrapper">
-        <!-- Layout principal -->
-        <div class="container-fluid mt-4">
+        <div class="container-fluid mt-4 mb-5">
             <div class="row">
 
-                <!-- Menu lateral -->
-                <aside class="col-md-3">
-                    <div class="list-group mb-4">
-                        <h5 class="mb-3">DESTAQUES DO CURSO</h5>
-                        <a href="#" class="list-group-item list-group-item-action">Jornada da Computação</a>
-                        <a href="#" class="list-group-item list-group-item-action">Computer Day</a>
-                        <a href="#" class="list-group-item list-group-item-action">Bolsas e Auxílios</a>
-                        <a href="#" class="list-group-item list-group-item-action">Projetos</a>
-                        <a href="#" class="list-group-item list-group-item-action">Laboratórios</a>
-                        <a href="grupos-de-estudo.html" class="list-group-item list-group-item-action">Grupos de Estudo e Pesquisa</a>
+                <aside class="col-md-3 mb-4">
+                    <div class="list-group mb-4 shadow-sm">
+                        <h6 class="list-group-item list-group-item-light fw-bold text-success text-uppercase mb-0">
+                            <i class="bi bi-star-fill me-2"></i>Destaques do Curso
+                        </h6>
+                        <a href="#" class="list-group-item list-group-item-action sidebar-link"><i class="bi bi-calendar-event me-2 text-secondary"></i>Jornada da Computação</a>
+                        <a href="#" class="list-group-item list-group-item-action sidebar-link"><i class="bi bi-pc-display me-2 text-secondary"></i>Computer Day</a>
+                        <a href="#" class="list-group-item list-group-item-action sidebar-link"><i class="bi bi-wallet2 me-2 text-secondary"></i>Bolsas e Auxílios</a>
+                        <a href="#" class="list-group-item list-group-item-action sidebar-link"><i class="bi bi-lightbulb me-2 text-secondary"></i>Projetos</a>
+                        <a href="#" class="list-group-item list-group-item-action sidebar-link"><i class="bi bi-router me-2 text-secondary"></i>Laboratórios</a>
+                        <a href="grupos-de-estudo.html" class="list-group-item list-group-item-action sidebar-link active bg-success border-success">
+                            <i class="bi bi-people-fill me-2"></i>Grupos de Estudo
+                        </a>
                     </div>
 
-                    <div class="list-group">
-                        <h5 class="mb-3">CURSOS DA ÁREA</h5>
-                        <a href="#" class="list-group-item list-group-item-action active bg-success border-success">Sistemas
-                            de Informação</a>
-                        <a href="#" class="list-group-item list-group-item-action">Técnico em Informática Integrado</a>
-                        <a href="#" class="list-group-item list-group-item-action">Técnico EaD</a>
-                        <a href="#" class="list-group-item list-group-item-action">Pós-graduação</a>
+                    <div class="list-group shadow-sm">
+                        <h6 class="list-group-item list-group-item-light fw-bold text-success text-uppercase mb-0">
+                            <i class="bi bi-book-half me-2"></i>Cursos da Área
+                        </h6>
+                        <a href="#" class="list-group-item list-group-item-action sidebar-link fw-bold text-success">Sistemas de Informação</a>
+                        <a href="#" class="list-group-item list-group-item-action sidebar-link">Técnico em Informática Integrado</a>
+                        <a href="#" class="list-group-item list-group-item-action sidebar-link">Técnico EaD</a>
+                        <a href="#" class="list-group-item list-group-item-action sidebar-link">Pós-graduação</a>
                     </div>
                 </aside>
 
-                <!-- Conteúdo principal -->
                 <main class="col-md-9">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h2 class="card-title text-success">Grupos de Estudo e Pesquisa</h2>
-                            <p class="card-text">
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-body p-4 p-md-5">
+                            
+                            <h2 class="card-title text-success fw-bold border-bottom pb-3 mb-4">
+                                <i class="bi bi-people me-2"></i>Grupos de Estudo e Pesquisa
+                            </h2>
+                            
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="img-fluid rounded shadow-sm mb-4" alt="Alunos trabalhando juntos em computadores">
+
+                            <p class="lead text-secondary">
                                 Os Grupos de Estudo e Pesquisa do curso de Sistemas de Informação do IFSULDEMINAS - Campus Machado têm como objetivo complementar a formação acadêmica dos estudantes por meio da investigação científica, desenvolvimento de projetos práticos e aprofundamento em temas específicos da área de tecnologia.
                             </p>
                             <p class="card-text">
                                 Esses grupos são compostos por alunos, professores e, em alguns casos, profissionais convidados, promovendo um ambiente colaborativo de aprendizado e inovação. As atividades desenvolvidas incluem encontros periódicos, oficinas, participação em eventos, produção de artigos, desenvolvimento de softwares, entre outras iniciativas.
                             </p>
-                            <p class="card-text">
-                                Atualmente, o curso conta com diversos grupos ativos, entre eles:
-                            </p>
-                            <ul>
-                                <li><strong>Grupo de Pesquisa em Inteligência Artificial (GPIA):</strong> Focado em aprendizado de máquina, redes neurais e aplicações de IA.</li>
-                                <li><strong>Laboratório de Desenvolvimento Web e Mobile (LDWM):</strong> Voltado para a criação de soluções tecnológicas com foco em usabilidade e acessibilidade.</li>
-                                <li><strong>Grupo de Segurança da Informação (GSI):</strong> Estuda técnicas de proteção de dados, criptografia e cibersegurança.</li>
-                                <li><strong>Estudos em Ciência de Dados:</strong> Envolve análise de dados, estatística aplicada e visualização de informações.</li>
-                            </ul>
-                            <p class="card-text">
-                                A participação nos grupos é aberta a todos os alunos do curso e representa uma excelente oportunidade de crescimento pessoal, acadêmico e profissional. Fique atento aos murais e canais oficiais do curso para saber como participar!
-                            </p>
+
+                            <h4 class="mt-5 mb-4 text-success">
+                                <i class="bi bi-collection-play me-2"></i>Nossos Grupos Ativos
+                            </h4>
+
+                            <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                                <div class="col">
+                                    <div class="card h-100 group-card border-success border-opacity-25 shadow-sm">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-success text-white rounded-circle p-3 me-3 d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
+                                                    <i class="bi bi-robot fs-4"></i>
+                                                </div>
+                                                <h5 class="card-title text-success mb-0 fw-bold">GPIA</h5>
+                                            </div>
+                                            <h6 class="card-subtitle mb-2 text-muted">Grupo de Pesquisa em Inteligência Artificial</h6>
+                                            <p class="card-text small">Focado em aprendizado de máquina, redes neurais e aplicações de Inteligência Artificial para resolução de problemas reais.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card h-100 group-card border-success border-opacity-25 shadow-sm">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-success text-white rounded-circle p-3 me-3 d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
+                                                    <i class="bi bi-laptop fs-4"></i>
+                                                </div>
+                                                <h5 class="card-title text-success mb-0 fw-bold">LDWM</h5>
+                                            </div>
+                                            <h6 class="card-subtitle mb-2 text-muted">Laboratório de Desenvolvimento Web e Mobile</h6>
+                                            <p class="card-text small">Voltado para a criação de soluções tecnológicas modernas, com forte foco em usabilidade, performance e acessibilidade.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card h-100 group-card border-success border-opacity-25 shadow-sm">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-success text-white rounded-circle p-3 me-3 d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
+                                                    <i class="bi bi-shield-lock fs-4"></i>
+                                                </div>
+                                                <h5 class="card-title text-success mb-0 fw-bold">GSI</h5>
+                                            </div>
+                                            <h6 class="card-subtitle mb-2 text-muted">Grupo de Segurança da Informação</h6>
+                                            <p class="card-text small">Estuda e pesquisa as melhores técnicas de proteção de dados, criptografia, testes de intrusão e cibersegurança aplicada.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card h-100 group-card border-success border-opacity-25 shadow-sm">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-success text-white rounded-circle p-3 me-3 d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
+                                                    <i class="bi bi-bar-chart-line fs-4"></i>
+                                                </div>
+                                                <h5 class="card-title text-success mb-0 fw-bold">Ciência de Dados</h5>
+                                            </div>
+                                            <h6 class="card-subtitle mb-2 text-muted">Estudos em Ciência de Dados</h6>
+                                            <p class="card-text small">Envolve processos de análise de grandes volumes de dados (Big Data), estatística aplicada e visualização interativa de informações.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success d-flex align-items-center mt-4 shadow-sm" role="alert">
+                                <i class="bi bi-info-circle-fill fs-4 me-3"></i>
+                                <div>
+                                    A participação nos grupos é <strong>aberta a todos os alunos</strong> do curso e representa uma excelente oportunidade de crescimento pessoal, acadêmico e profissional. Fique atento aos murais e canais oficiais para participar!
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </main>
@@ -92,9 +184,11 @@
         </div>
     </div>
 
-    <!-- Rodapé -->
-    <footer class="bg-dark text-white text-center py-3 mt-4">
-        <p>&copy; 2025 IFSULDEMINAS - Campus Machado | Curso de Sistemas de Informação</p>
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 IFSULDEMINAS - Campus Machado | Curso de Sistemas de Informação</p>
+            <small class="text-white-50">Desenvolvido para fins de pesquisa e extensão.</small>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
