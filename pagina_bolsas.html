@@ -1,147 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolsas e Auxílios</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="description"
+        content="Bolsas e Auxílios disponíveis para estudantes do IFSULDEMINAS Campus Machado - Sistemas de Informação">
+    <title>Bolsas e Auxílios - IFSULDEMINAS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bolsas.css">
 </head>
+
 <body>
-    <!-- Navbar principal -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-    <div class="container">
-      <a class="navbar-brand" href="#">IFSULDEMINAS - Campus Machado</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-mortarboard-fill me-2"></i>IFSULDEMINAS - Campus Machado
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Layout principal -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Menu lateral -->
+            <aside class="col-md-3">
+                <div class="list-group mb-4">
+                    <h5 class="mb-3">DESTAQUES DO CURSO</h5>
+                    <a href="jornada-computacao.html" class="list-group-item list-group-item-action">Jornada da
+                        Computação</a>
+                    <a href="computerday.html" class="list-group-item list-group-item-action">Computer Day</a>
+                    <a href="pagina_bolsas.html"
+                        class="list-group-item list-group-item-action active bg-success border-success">Bolsas e
+                        Auxílios</a>
+                    <a href="projetos.html" class="list-group-item list-group-item-action">Projetos</a>
+                    <a href="laboratory.html" class="list-group-item list-group-item-action">Laboratórios</a>
+                    <a href="grupos-de-estudo.html" class="list-group-item list-group-item-action">Grupos de Estudo e
+                        Pesquisa</a>
+                </div>
+                <div class="list-group">
+                    <h5 class="mb-3">CURSOS DA ÁREA</h5>
+                    <a href="#" class="list-group-item list-group-item-action">Sistemas de Informação</a>
+                    <a href="#" class="list-group-item list-group-item-action">Técnico em Informática Integrado</a>
+                    <a href="#" class="list-group-item list-group-item-action">Técnico EaD</a>
+                    <a href="#" class="list-group-item list-group-item-action">Pós-graduação</a>
+                </div>
+            </aside>
+
+            <!-- Conteúdo principal -->
+            <main class="col-md-9">
+                <!-- Hero Section -->
+                <section class="bolsas-hero" id="bolsas-hero">
+                    <div class="hero-content">
+                        <span class="hero-badge"><i class="bi bi-star-fill"></i> Oportunidades</span>
+                        <h1>Bolsas e Auxílios</h1>
+                        <p>O IFSULDEMINAS – Campus Machado oferece diversos tipos de auxílios para apoiar os estudantes
+                            em situação de vulnerabilidade socioeconômica. Conheça as oportunidades disponíveis e
+                            garanta o seu direito!</p>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Tipos de Auxílio</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Alunos Beneficiados</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2025</span>
+                            <span class="stat-label">Editais Abertos</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Cards de Auxílios -->
+                <section class="bolsas-grid" id="bolsas-grid">
+                    <!-- Auxílio Permanência -->
+                    <div class="bolsa-card" id="card-permanencia">
+                        <div class="bolsa-card-icon" style="--accent: #10b981;">
+                            <i class="bi bi-house-heart-fill"></i>
+                        </div>
+                        <div class="bolsa-card-content">
+                            <h3>Auxílio Permanência</h3>
+                            <p>Apoio financeiro para que o estudante possa permanecer e concluir seus estudos com
+                                tranquilidade no campus.</p>
+                            <div class="bolsa-card-links">
+                                <a href="#" class="bolsa-link" id="link-edital-permanencia">
+                                    <i class="bi bi-file-earmark-text"></i> Edital do Auxílio
+                                </a>
+                                <a href="#" class="bolsa-link" id="link-form-permanencia">
+                                    <i class="bi bi-pencil-square"></i> Formulário de Solicitação
+                                </a>
+                            </div>
+                        </div>
+                        <span class="bolsa-card-tag" style="--accent: #10b981;">Aberto</span>
+                    </div>
+
+                    <!-- Auxílio Alimentação -->
+                    <div class="bolsa-card" id="card-alimentacao">
+                        <div class="bolsa-card-icon" style="--accent: #f59e0b;">
+                            <i class="bi bi-cup-hot-fill"></i>
+                        </div>
+                        <div class="bolsa-card-content">
+                            <h3>Auxílio Alimentação</h3>
+                            <p>Subsídio para refeições no restaurante universitário, garantindo uma alimentação saudável
+                                durante o período letivo.</p>
+                            <div class="bolsa-card-links">
+                                <a href="#" class="bolsa-link" id="link-edital-alimentacao">
+                                    <i class="bi bi-file-earmark-text"></i> Edital do Auxílio
+                                </a>
+                                <a href="#" class="bolsa-link" id="link-form-alimentacao">
+                                    <i class="bi bi-pencil-square"></i> Formulário de Solicitação
+                                </a>
+                            </div>
+                        </div>
+                        <span class="bolsa-card-tag" style="--accent: #f59e0b;">Aberto</span>
+                    </div>
+
+                    <!-- Auxílio Transporte -->
+                    <div class="bolsa-card" id="card-transporte">
+                        <div class="bolsa-card-icon" style="--accent: #3b82f6;">
+                            <i class="bi bi-bus-front-fill"></i>
+                        </div>
+                        <div class="bolsa-card-content">
+                            <h3>Auxílio Transporte</h3>
+                            <p>Auxílio para custear o transporte dos estudantes que residem em localidades distantes do
+                                campus.</p>
+                            <div class="bolsa-card-links">
+                                <a href="#" class="bolsa-link" id="link-edital-transporte">
+                                    <i class="bi bi-file-earmark-text"></i> Edital do Auxílio
+                                </a>
+                                <a href="#" class="bolsa-link" id="link-form-transporte">
+                                    <i class="bi bi-pencil-square"></i> Formulário de Solicitação
+                                </a>
+                            </div>
+                        </div>
+                        <span class="bolsa-card-tag" style="--accent: #3b82f6;">Aberto</span>
+                    </div>
+
+                    <!-- Auxílio Moradia -->
+                    <div class="bolsa-card" id="card-moradia">
+                        <div class="bolsa-card-icon" style="--accent: #8b5cf6;">
+                            <i class="bi bi-building-fill"></i>
+                        </div>
+                        <div class="bolsa-card-content">
+                            <h3>Auxílio Moradia</h3>
+                            <p>Suporte financeiro para estudantes que precisam de moradia fora de sua cidade de origem
+                                durante o período de aulas.</p>
+                            <div class="bolsa-card-links">
+                                <a href="#" class="bolsa-link" id="link-edital-moradia">
+                                    <i class="bi bi-file-earmark-text"></i> Edital do Auxílio
+                                </a>
+                                <a href="#" class="bolsa-link" id="link-form-moradia">
+                                    <i class="bi bi-pencil-square"></i> Formulário de Solicitação
+                                </a>
+                            </div>
+                        </div>
+                        <span class="bolsa-card-tag" style="--accent: #8b5cf6;">Aberto</span>
+                    </div>
+
+                    <!-- Auxílio Didático -->
+                    <div class="bolsa-card" id="card-didatico">
+                        <div class="bolsa-card-icon" style="--accent: #ef4444;">
+                            <i class="bi bi-book-fill"></i>
+                        </div>
+                        <div class="bolsa-card-content">
+                            <h3>Auxílio Didático</h3>
+                            <p>Recurso para aquisição de materiais didáticos, como livros e equipamentos necessários
+                                para as disciplinas do curso.</p>
+                            <div class="bolsa-card-links">
+                                <a href="#" class="bolsa-link" id="link-edital-didatico">
+                                    <i class="bi bi-file-earmark-text"></i> Edital do Auxílio
+                                </a>
+                                <a href="#" class="bolsa-link" id="link-form-didatico">
+                                    <i class="bi bi-pencil-square"></i> Formulário de Solicitação
+                                </a>
+                            </div>
+                        </div>
+                        <span class="bolsa-card-tag" style="--accent: #ef4444;">Aberto</span>
+                    </div>
+                </section>
+
+                <!-- Seção de Informações -->
+                <section class="bolsas-info" id="bolsas-info">
+                    <div class="info-card">
+                        <i class="bi bi-calendar-check"></i>
+                        <h4>Prazos</h4>
+                        <p>Fique atento ao calendário acadêmico para não perder os prazos de inscrição dos editais.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="bi bi-file-earmark-check"></i>
+                        <h4>Documentação</h4>
+                        <p>Reúna toda a documentação necessária antes de iniciar sua inscrição nos programas de auxílio.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <i class="bi bi-question-circle"></i>
+                        <h4>Dúvidas</h4>
+                        <p>Entre em contato com a Assistência Estudantil para esclarecer suas dúvidas sobre os auxílios.
+                        </p>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
-  </nav>
 
-  <!-- Layout principal -->
-  <div class="container-fluid mt-4">
-    <div class="row">
-      
-      <!-- Menu lateral -->
-      <aside class="col-md-3">
-        <div class="list-group mb-4">
-          <h5 class="mb-3">DESTAQUES DO CURSO</h5>
-          <a href="jornada-computacao.html" class="list-group-item list-group-item-action">Jornada da Computação</a>
-          <a href="computerday.html" class="list-group-item list-group-item-action">Computer Day</a>
-          <a href="pagina_bolsas.html" class="list-group-item list-group-item-action">Bolsas e Auxílios</a>
-          <a href="projetos.html" class="list-group-item list-group-item-action">Projetos</a>
-          <a href="laboratory.html" class="list-group-item list-group-item-action">Laboratórios</a>
-          <a href="grupos-de-estudo.html" class="list-group-item list-group-item-action">Grupos de Estudo e Pesquisa</a>
-        </div>
-
-        <div class="list-group">
-          <h5 class="mb-3">CURSOS DA ÁREA</h5>
-          <a href="#" class="list-group-item list-group-item-action">Sistemas de Informação</a>
-          <a href="#" class="list-group-item list-group-item-action">Técnico em Informática Integrado</a>
-          <a href="#" class="list-group-item list-group-item-action">Técnico EaD</a>
-          <a href="#" class="list-group-item list-group-item-action">Pós-graduação</a>
-        </div>
-      </aside>
-
-      <!-- Conteúdo principal -->
-        <main class="col-md-9">
-            <h2 class="mb-4">Bolsas e Auxílios</h2>
-        
-            <p>O IFSULDEMINAS – Campus Machado oferece diversos tipos de auxílios para apoiar os estudantes em situação de vulnerabilidade socioeconômica. Confira abaixo os tipos disponíveis e os respectivos documentos:</p>
-        
-            <div class="accordion" id="accordionAuxilios">
-            <!-- Auxílio Permanência -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingPermanencia">
-                <button class="accordion-button-66" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePermanencia">
-                    Auxílio Permanência
-                </button>
-                </h2>
-                <div id="collapsePermanencia" class="accordion-collapse collapse show" data-bs-parent="#accordionAuxilios">
-                <div class="accordion-body">
-                    <ul>
-                    <li><a href="#">Edital do Auxílio Permanência</a></li>
-                    <li><a href="#">Formulário de Solicitação do Auxílio Permanência</a></li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-        
-            <!-- Auxílio Alimentação -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingAlimentacao">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlimentacao">
-                    Auxílio Alimentação
-                </button>
-                </h2>
-                <div id="collapseAlimentacao" class="accordion-collapse collapse" data-bs-parent="#accordionAuxilios">
-                <div class="accordion-body">
-                    <ul>
-                    <li><a href="#">Edital do Auxílio Alimentação</a></li>
-                    <li><a href="#">Formulário de Solicitação do Auxílio Alimentação</a></li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-        
-            <!-- Auxílio Transporte -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTransporte">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTransporte">
-                    Auxílio Transporte
-                </button>
-                </h2>
-                <div id="collapseTransporte" class="accordion-collapse collapse" data-bs-parent="#accordionAuxilios">
-                <div class="accordion-body">
-                    <ul>
-                    <li><a href="#">Edital do Auxílio Transporte</a></li>
-                    <li><a href="#">Formulário de Solicitação do Auxílio Transporte</a></li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-        
-            <!-- Auxílio Moradia -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingMoradia">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMoradia">
-                    Auxílio Moradia
-                </button>
-                </h2>
-                <div id="collapseMoradia" class="accordion-collapse collapse" data-bs-parent="#accordionAuxilios">
-                <div class="accordion-body">
-                    <ul>
-                    <li><a href="#">Edital do Auxílio Moradia</a></li>
-                    <li><a href="#">Formulário de Solicitação do Auxílio Moradia</a></li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-        
-            <!-- Auxílio Didático -->
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingDidatico">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDidatico">
-                    Auxílio Didático
-                </button>
-                </h2>
-                <div id="collapseDidatico" class="accordion-collapse collapse" data-bs-parent="#accordionAuxilios">
-                <div class="accordion-body">
-                    <ul>
-                    <li><a href="#">Edital do Auxílio Didático</a></li>
-                    <li><a href="#">Formulário de Solicitação do Auxílio Didático</a></li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-            </div>
-        </main>
-  
-  
-
-      <footer class="bg-dark text-white text-center py-3 mt-4">
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
         <p>&copy; 2025 IFSULDEMINAS - Campus Machado | Curso de Sistemas de Informação</p>
-      </footer>
-    
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animate cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transitionDelay = `${index * 0.08}s`;
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.bolsa-card, .info-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 </body>
+
 </html>
