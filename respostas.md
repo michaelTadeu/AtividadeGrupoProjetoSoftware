@@ -1,56 +1,75 @@
-# Respostas da Atividade: Atualização de Branch com Hotfix na main e Novo Pull Request
+# Relatório de Resolução de Conflitos e Melhoria de Layout
 
-## 1. Entendimento do conflito
-**O que causou o conflito no arquivo index.html?**
-O conflito foi causado porque a mesma parte do arquivo (o menu lateral) foi modificada em duas branches diferentes. A branch `main` (`prd`) aplicou um hotfix para adicionar "pages/" aos caminhos dos links, enquanto na branch de desenvolvimento os nomes dos links foram customizados de acordo com a atividade.
+## 1\. Entendimento do conflito
 
-**Em qual parte do código ele ocorreu?**
-Ele ocorreu nas linhas 38-43 do arquivo `index.html`, no trecho onde estão definidos os links das tags `<a>` do menu lateral "DESTAQUES DO CURSO".
+* **O que causou o conflito no arquivo `index.html`?**
+O conflito foi gerado pelos links dos botões da sidebar.
+* **Em qual parte do código ele ocorreu?**
+No menu lateral.
 
-## 2. Processo de resolução
-**Qual opção vocês utilizaram inicialmente?**
-o ( ) Accept Current
-o ( ) Accept Incoming
-o (X) Accept Both (ajuste manual combinando ambos)
+## 2\. Processo de resolução
 
-**Foi necessário ajuste manual após isso? Explique o que foi feito.**
-Sim. Foi necessário um ajuste manual para juntar as duas intenções. Ao resolver as marcações do Git, combinamos o caminho do link que veio da branch de correção (`href="pages/..."`) com o texto/conteúdo interno que definimos na nossa branch (ex: `>Bolsa Permanência</a>`).
+* **Qual opção vocês utilizaram inicialmente?**
 
-## 3. Decisão técnica
-**Quais partes do código da main vocês mantiveram?**
-Mantivemos o valor dos atributos `href` corrigidos da main (exemplo: `href="pages/pagina_bolsas.html"`).
+  * \[ ] Accept Current
+  * \[x] Accept Incoming
+  * \[ ] Accept Both
+* **Foi necessário ajuste manual após isso? Explique o que foi feito.**
+Não
 
-**Quais partes da sua branch foram preservadas?**
-Foram preservados os nomes de exibição dos botões do menu baseados no tema de Bolsas Auxílios (exemplo: `Bolsa Permanência`, `Auxílio Transporte`, `Auxílio Moradia`).
+## 3\. Decisão técnica
 
-## 4. Dificuldades encontradas
-**Quais foram as principais dificuldades durante:**
-* **o merge:** Garantir que estaríamos trazendo a versão correta do hotfix para dentro da feature sem perder o trabalho recém-feito.
-* **a resolução de conflitos:** Observar cuidadosamente qual linha pertencia à `HEAD` e qual vinha da `origin` para combiná-las de forma que a sintaxe do HTML não fosse quebrada (e.g. evitar duplicação de tags `<a>`).
-* **a melhoria de layout:** Encontrar as classes corretas do Bootstrap que combinassem bem juntas e decidir a melhor hierarquia visual para as informações de bolsas.
+* **Quais partes do código da `main` vocês mantiveram?**
+Mantivemos toda a estrutura. Apenas a página escolhida pelo grupo foi modificada.
+* **Quais partes da sua branch foram preservadas?**
+A página escolhida.
 
-## 5. Solução adotada
-**Como o grupo resolveu os problemas encontrados? Houve necessidade de pesquisar? Onde?**
-O grupo resolveu os problemas do merge lendo minuciosamente o código que estava em conflito e reescrevendo a linha para unir o `href` corrigido ao texto customizado. Para a melhoria do layout, pesquisamos na documentação oficial do Bootstrap (versão 5) sobre "Cards" e "Utilities", e no site do Bootstrap Icons para as classes visuais.
+## 4\. Dificuldades encontradas
 
-## 6. Melhoria de layout
-**Qual página foi escolhida para melhoria?**
-A página escolhida para a aplicação do tema de bolsas foi `pagina_bolsas.html`.
+* **Quais foram as principais dificuldades durante:**
 
-**Quais mudanças visuais foram implementadas? Qual foi o objetivo dessas melhorias?**
-Foram adicionados os Bootstrap Icons nas informações de texto. A estrutura dos cards foi modernizada aplicando sombras (`shadow`), bordas coloridas no topo (`border-top border-success border-3`) e arredondamento nas bordas (`rounded-3`). O objetivo foi tornar as informações sobre os auxílios mais fáceis de escanear e visualmente profissionais.
+  * **O merge?** Dificuldade de organização entre o grupo
+  * **A resolução de conflitos?** Nenhuma
+  * **A melhoria de layout?** Definição de layout
 
-## 7. Aprendizado
-**O que o grupo aprendeu sobre:**
-* **uso de branches:** Permitem o desenvolvimento isolado de funcionalidades ou testes sem quebrar o código principal.
-* **merge:** É a forma de unificar diferentes linhas do tempo de um projeto, integrando código de forma colaborativa.
-* **conflitos no Git:** Ocorrem quando o sistema não consegue definir automaticamente o que preservar. Eles são um pedido de intervenção humana para combinar as intenções com inteligência.
+## 5\. Solução adotada
 
-## 8. Autoavaliação do grupo
+* **Como o grupo resolveu os problemas encontrados?**
+Mudanças para garantir um layout mais intuitivo e que seguisse as boas práticas de IHC.
+* **Houve necessidade de pesquisar? Onde?**
+Sim, usamos o Gemini.
+
+## 6\. Melhoria de layout
+
+* **Qual página foi escolhida para melhoria?**
+Bolsas e Auxílios
+* **Quais mudanças visuais foram implementadas?**
+A página de Bolsas e Auxílios foi redesenhada substituindo o accordion genérico por um layout moderno com hero section em gradiente verde, 5 cards individuais com ícones coloridos (Bootstrap Icons) e tags de status para cada tipo de auxílio. Foi adicionada uma seção informativa com 3 mini-cards (Prazos, Documentação, Dúvidas), tipografia Inter (Google Fonts), e animações de scroll (fade-in nos cards via IntersectionObserver) com efeitos de hover. Todo o estilo foi separado em um arquivo dedicado bolsas.css com design responsivo.
+
+
+
+* **Qual foi o objetivo dessas melhorias?**
+
+Melhorar a usabilidade da página.
+
+
+## 7\. Aprendizado
+
+* **O que o grupo aprendeu sobre:**
+
+  * **Uso de branches?** Servem para desenvolvimento paralelo e colaboração.
+  * **Merge?** É a mesclagem de conteúdo de duas branchs diferentes.
+  * **Conflitos no Git?** Ocorrem quando mais de um usuário faz modificações no mesmo arquivo e as duas branchs passam pelo processo de merge.
+
+## 8\. Autoavaliação do grupo
+
 Dê uma nota de 0 a 10 para:
-* **Organização do grupo:** 10
-* **Entendimento da atividade:** 10
-* **Resultado final:** 10
 
-**Justifique brevemente:**
-O grupo conseguiu se coordenar bem para cumprir todos os requisitos da tarefa em ordem cronológica, usando os comandos git requeridos e produzindo uma página bem diagramada sem quebrar a navegabilidade do sistema original.
+* **Organização do grupo:** 8
+* **Entendimento da atividade:** 8
+* **Resultado final:** 8
+
+
+
+Justificativa: Nota 8 em todos os quesitos pois acreditamos que resolvemos de forma eficiente os conflitos técnicos e alcançamos um resultado visual satisfatório. O entendimento da atividade foi bom, permitindo que utilizássemos os comandos do Git com consciência, mas ainda há espaço para melhorar. No geral, o projeto entrega o que foi proposto.
+
