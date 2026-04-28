@@ -8,8 +8,61 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <style>
+      /* Animação de entrada para o título principal */
+      .card-title-animated {
+        animation: fadeInUp 0.8s ease-out;
+        opacity: 0;
+      }
+      .card-title-animated.loaded {
+        opacity: 1;
+      }
+
+      /* Animação de entrada para os cards */
+      .lab-card {
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+      }
+      .lab-card.show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* Efeito de hover nos cards */
+      .lab-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+        border-color: #0f5132 !important;
+      }
+
+      /* Efeito de brilho suave no ícone */
+      .lab-icon {
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      .lab-card:hover .lab-icon {
+        transform: scale(1.2);
+        color: #198754;
+      }
+
+      /* Keyframes */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar principal -->
@@ -34,26 +87,12 @@
         <aside class="col-md-3">
           <div class="list-group mb-4">
             <h5 class="mb-3">DESTAQUES DO CURSO</h5>
-            <a href="#" class="list-group-item list-group-item-action"
-              >Jornada da Computação</a
-            >
-            <a href="#" class="list-group-item list-group-item-action"
-              >Computer Day</a
-            >
-            <a href="#" class="list-group-item list-group-item-action"
-              >Bolsas e Auxílios</a
-            >
-            <a href="#" class="list-group-item list-group-item-action"
-              >Projetos</a
-            >
-            <a
-              href="/laboratory.html"
-              class="list-group-item list-group-item-action"
-              >Laboratórios</a
-            >
-            <a href="#" class="list-group-item list-group-item-action"
-              >Grupos de Estudo e Pesquisa</a
-            >
+            <a href="/jornada-computacao.html" class="list-group-item list-group-item-action">Jornada SI</a>
+            <a href="/computerday.html" class="list-group-item list-group-item-action">Eventos</a>
+            <a href="/pagina_bolsas.html" class="list-group-item list-group-item-action">Bolsas</a>
+            <a href="/projetos.html" class="list-group-item list-group-item-action">Projetos</a>
+            <a href="/laboratory.html" class="list-group-item list-group-item-action active bg-success border-success">Laboratórios</a>
+            <a href="/grupos-de-estudo.html" class="list-group-item list-group-item-action">Grupos de Estudo e Pesquisa</a>
           </div>
 
           <div class="list-group">
@@ -77,145 +116,104 @@
 
         <!-- Conteúdo principal -->
         <main class="col-md-9">
-          <div class="card mb-4 text-center">
+          <div class="card mb-4 text-center border-success shadow">
             <div class="card-body">
-              <h2 class="card-title text-center text-success">
-                Laboratórios do Setor de Informática
+              <h2 class="card-title text-center text-success card-title-animated">
+                <i class="bi bi-hdd-network me-2"></i>Laboratórios do Setor de Informática
               </h2>
               <p class="card-text">
-                Veja todas as informações de nossos laboratórios e quais são as
-                suas funções!
+                Conheça os laboratórios do curso de Sistemas de Informação e suas principais finalidades.
               </p>
             </div>
           </div>
 
-          <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
-            <!-- Card 1 -->
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3">
+            <!-- Laboratório 1 -->
             <div class="col">
-              <div class="card h-100 shadow border-success border-top border-3 rounded-3">
-                <img
-                  src="assets/images/lab-image.jpg"
-                  class="card-img-top"
-                  alt="Laboratório de Informática"
-                />
-                <div class="card-body p-4">
-                  <h5 class="card-title text-success mb-3 fw-bold">
-                    <i class="bi bi-cpu-fill me-2"></i>Lab 1 - Arquitetura
+              <div class="card h-100 lab-card shadow-sm border-success">
+                <div class="card-body text-center">
+                  <i class="bi bi-cpu text-success display-4 mb-3 lab-icon"></i>
+                  <h5 class="card-title text-center mb-3">
+                    Laboratório 1 - Arquitetura de Computadores
                   </h5>
-                  <p class="card-text mb-2"><i class="bi bi-display text-muted me-2"></i><strong>Computadores:</strong> 20</p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-info-circle text-muted me-2"></i><strong>Finalidade:</strong> Ensino e prática de arquitetura
-                  </p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-book text-muted me-2"></i><strong>Área:</strong> Hardware
-                  </p>
-                  <p class="card-text mb-0">
-                    <i class="bi bi-snow text-muted me-2"></i><strong>Climatização:</strong> 2 un.
-                  </p>
+                  <ul class="list-unstyled small text-start">
+                    <li><strong>Computadores:</strong> 20</li>
+                    <li><strong>Finalidade:</strong> Ensino e prática de Arquitetura de Computadores</li>
+                    <li><strong>Área:</strong> Arquitetura de Computadores</li>
+                    <li><strong>Ar-condicionado:</strong> 2 unidades</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Laboratório 2 -->
             <div class="col">
-              <div class="card h-100 shadow border-success border-top border-3 rounded-3">
-                <img
-                  src="assets/images/lab-image.jpg"
-                  class="card-img-top"
-                  alt="Laboratório de Informática"
-                />
-                <div class="card-body p-4">
-                  <h5 class="card-title text-success mb-3 fw-bold">
-                    <i class="bi bi-window-sidebar me-2"></i>Lab 2 - Desktop
+              <div class="card h-100 lab-card shadow-sm border-success">
+                <div class="card-body text-center">
+                  <i class="bi bi-code-slash text-success display-4 mb-3 lab-icon"></i>
+                  <h5 class="card-title text-center mb-3">
+                    Laboratório 2 - Desenvolvimento Desktop
                   </h5>
-                  <p class="card-text mb-2"><i class="bi bi-display text-muted me-2"></i><strong>Computadores:</strong> 20</p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-info-circle text-muted me-2"></i><strong>Finalidade:</strong> Desenvolvimento Desktop
-                  </p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-code-slash text-muted me-2"></i><strong>Área:</strong> Software
-                  </p>
-                  <p class="card-text mb-0">
-                    <i class="bi bi-snow text-muted me-2"></i><strong>Climatização:</strong> 2 un.
-                  </p>
+                  <ul class="list-unstyled small text-start">
+                    <li><strong>Computadores:</strong> 20</li>
+                    <li><strong>Finalidade:</strong> Ensino e prática de Desenvolvimento Desktop</li>
+                    <li><strong>Área:</strong> Desenvolvimento Desktop</li>
+                    <li><strong>Ar-condicionado:</strong> 2 unidades</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Card 3 -->
+            <!-- Laboratório 3 -->
             <div class="col">
-              <div class="card h-100 shadow border-success border-top border-3 rounded-3">
-                <img
-                  src="assets/images/lab-image.jpg"
-                  class="card-img-top"
-                  alt="Laboratório de Informática"
-                />
-                <div class="card-body p-4">
-                  <h5 class="card-title text-success mb-3 fw-bold">
-                    <i class="bi bi-bar-chart-fill me-2"></i>Lab 3 - Dados
+              <div class="card h-100 lab-card shadow-sm border-success">
+                <div class="card-body text-center">
+                  <i class="bi bi-graph-up text-success display-4 mb-3 lab-icon"></i>
+                  <h5 class="card-title text-center mb-3">
+                    Laboratório 3 - Análise de Dados
                   </h5>
-                  <p class="card-text mb-2"><i class="bi bi-display text-muted me-2"></i><strong>Computadores:</strong> 25</p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-info-circle text-muted me-2"></i><strong>Finalidade:</strong> Análise de Dados
-                  </p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-graph-up text-muted me-2"></i><strong>Área:</strong> Data Science
-                  </p>
-                  <p class="card-text mb-0">
-                    <i class="bi bi-snow text-muted me-2"></i><strong>Climatização:</strong> 3 un.
-                  </p>
+                  <ul class="list-unstyled small text-start">
+                    <li><strong>Computadores:</strong> 25</li>
+                    <li><strong>Finalidade:</strong> Ensino e prática de Análise de Dados</li>
+                    <li><strong>Área:</strong> Análise de Dados</li>
+                    <li><strong>Ar-condicionado:</strong> 3 unidades</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Card 4 -->
+            <!-- Laboratório 4 -->
             <div class="col">
-              <div class="card h-100 shadow border-success border-top border-3 rounded-3">
-                <img
-                  src="assets/images/lab-image.jpg"
-                  class="card-img-top"
-                  alt="Laboratório de Informática"
-                />
-                <div class="card-body p-4">
-                  <h5 class="card-title text-success mb-3 fw-bold">
-                    <i class="bi bi-globe me-2"></i>Lab 4 - Web
+              <div class="card h-100 lab-card shadow-sm border-success">
+                <div class="card-body text-center">
+                  <i class="bi bi-globe2 text-success display-4 mb-3 lab-icon"></i>
+                  <h5 class="card-title text-center mb-3">
+                    Laboratório 4 - Desenvolvimento Web
                   </h5>
-                  <p class="card-text mb-2"><i class="bi bi-display text-muted me-2"></i><strong>Computadores:</strong> 20</p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-info-circle text-muted me-2"></i><strong>Finalidade:</strong> Desenvolvimento Web
-                  </p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-router text-muted me-2"></i><strong>Área:</strong> Redes & Web
-                  </p>
-                  <p class="card-text mb-0">
-                    <i class="bi bi-snow text-muted me-2"></i><strong>Climatização:</strong> 2 un.
-                  </p>
+                  <ul class="list-unstyled small text-start">
+                    <li><strong>Computadores:</strong> 20</li>
+                    <li><strong>Finalidade:</strong> Ensino e prática de Desenvolvimento Web</li>
+                    <li><strong>Área:</strong> Redes</li>
+                    <li><strong>Ar-condicionado:</strong> 2 unidades</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Card 5 -->
+            <!-- Laboratório 5 -->
             <div class="col">
-              <div class="card h-100 shadow border-success border-top border-3 rounded-3">
-                <img
-                  src="assets/images/lab-image.jpg"
-                  class="card-img-top"
-                  alt="Laboratório de Informática"
-                />
-                <div class="card-body p-4">
-                  <h5 class="card-title text-success mb-3 fw-bold">
-                    <i class="bi bi-phone me-2"></i>Lab 5 - Mobile
+              <div class="card h-100 lab-card shadow-sm border-success">
+                <div class="card-body text-center">
+                  <i class="bi bi-phone text-success display-4 mb-3 lab-icon"></i>
+                  <h5 class="card-title text-center mb-3">
+                    Laboratório 5 - Desenvolvimento Móvel
                   </h5>
-                  <p class="card-text mb-2"><i class="bi bi-display text-muted me-2"></i><strong>Computadores:</strong> 18</p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-info-circle text-muted me-2"></i><strong>Finalidade:</strong> Aplicativos Móveis
-                  </p>
-                  <p class="card-text mb-2">
-                    <i class="bi bi-phone-vibrate text-muted me-2"></i><strong>Área:</strong> Mobile
-                  </p>
-                  <p class="card-text mb-0">
-                    <i class="bi bi-snow text-muted me-2"></i><strong>Climatização:</strong> 2 un.
-                  </p>
+                  <ul class="list-unstyled small text-start">
+                    <li><strong>Computadores:</strong> 18</li>
+                    <li><strong>Finalidade:</strong> Programação de aplicativos móveis</li>
+                    <li><strong>Área:</strong> Mobile</li>
+                    <li><strong>Ar-condicionado:</strong> 2 unidades</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -225,12 +223,29 @@
     </div>
 
     <!-- Rodapé -->
-    <footer class="bg-dark text-white text-center py-3 mt-4">
+    <footer class="bg-dark text-white text-center py-3 mt-5">
       <p>
         &copy; 2025 IFSULDEMINAS - Campus Machado | Curso de Sistemas de
         Informação
       </p>
     </footer>
+
+    <!-- Script para ativar as animações na carga -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ativa título
+        const title = document.querySelector(".card-title-animated");
+        if (title) title.classList.add("loaded");
+
+        // Ativa cada card com um pequeno delay
+        const cards = document.querySelectorAll(".lab-card");
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("show");
+          }, 100 * index);
+        });
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
